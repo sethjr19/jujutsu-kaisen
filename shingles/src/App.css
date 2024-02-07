@@ -1,0 +1,27 @@
+#root {
+  margin: 0;
+  text-align: center;
+}
+
+body{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth 0.3s;
+  margin: 0;
+}
+
+.section{
+  height: 100vh;
+  display: flex;
+  scroll-snap-align: center;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: white;
+}

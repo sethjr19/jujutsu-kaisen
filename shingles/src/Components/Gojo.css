@@ -1,0 +1,10 @@
+.gojo-container{
+    height: 100vh;
+}
+
+.gojo-image{
+    width: 100vw;
+    background-size: cover;
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,72 @@
+.home-page{
+    height: 120vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-image {
+    width: 100vw;
+    position: absolute;
+    height: 120vh;
+    background-image: url(/src/assets/jjk.jpg);
+    background-size: cover;
+    background-position: center;
+    transform-origin: center;
+    z-index: -99;
+    transition: transform 0s ease; /* Adjust duration and easing as needed */
+    transform: scale(1); /* Initial scale (no zoom) */
+  }
+
+.bars{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    margin: 0px 130px;
+    justify-content: space-between;
+    color: whitesmoke;
+}
+
+.title-text{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family:'Jujutsu-Kaisen';
+    font-size: 5em;
+    transform: translateX(20px);
+    margin: 0px 160px;
+    color: whitesmoke;
+    transition: 0s ease;
+    z-index: 99;
+    position: absolute;
+}
+
+.home-content{
+    transition: transform 0s ease;
+}
+
+.title-text h1{
+    margin-bottom: 0;
+    font-size: 3em;
+    z-index: 99;
+}
+
+.title-text h2{
+    font-family:monospace;
+    margin-top: 0;
+    margin-right: 15px ;
+    transform: translateY(-30px);
+    font-size: 0.4em;
+    text-align: end;
+}
+
+.col{
+    margin:  0;
+    border-left: 2px solid white;
+    height: 500px;
+}
+
+.scroll-section{
+    margin-top: 300px;
+    font-size: 2.5rem;
+}
