@@ -4,17 +4,26 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
 const Home = () => {
-  const shrineContainer = document.getElementById("background-image");
-  window.addEventListener("scroll", () => {
-    // Calculate the zoom level based on the scroll position
-    const scrollY = window.scrollY;
-    const maxZoom = 1.2; // Adjust the maximum zoom level as needed
-    const zoom = 1 + (scrollY / window.innerHeight) * maxZoom;
-    const opacity = 1 - (scrollY / window.innerHeight)
-    // Apply the zoom level to the container using CSS scale
-    shrineContainer.style.transform = `scale(${zoom})`;
+  
+  useEffect(() => {
+    // Wait for the DOM content to be loaded
+    window.addEventListener("DOMContentLoaded", () => {
+      // Get a reference to the background image container
+      const shrineContainer = document.getElementById("background-image");
 
-  });
+      // Add a scroll event listener to update the zoom level on scroll
+      window.addEventListener("scroll", () => {
+        // Calculate the zoom level based on the scroll position
+        const scrollY = window.scrollY;
+        const maxZoom = 1.2; // Adjust the maximum zoom level as needed
+        const zoom = 1 + (scrollY / window.innerHeight) * maxZoom;
+        
+        // Apply the zoom level to the container using CSS scale
+        shrineContainer.style.transform = `scale(${zoom})`;
+      });
+    });
+  }, []);
+
 
   return (
     <div className='home-page' id='home-page'>
