@@ -1,5 +1,6 @@
 .gojo-container{
     height: 100vh;
+    display: flex;
 }
 
 .gojo-image{
@@ -7,4 +8,20 @@
     background-size: cover;
     background-size: cover;
     background-position: center;
+    position: absolute;
+    left: 0;
+    z-index: -99;
+}
+
+.gojo-text{
+    position: relative;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(50px);
+}
+
+.gojo-text h1{
+    color: white;
+    margin: 0;
 }
